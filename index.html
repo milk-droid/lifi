@@ -1564,6 +1564,28 @@ section.alt {
         padding-bottom: 65px;
     }
 }
+/* Modify the bottom navigation to behave better in embedded contexts */
+.bottom-nav {
+  position: sticky; /* Change from fixed to sticky */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Ensure proper viewport settings */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Adjust side spacing on mobile */
+  section {
+    padding: 40px 0;
+  }
+}
     </style>
 </head>
 <body>
